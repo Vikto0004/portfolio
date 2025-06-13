@@ -3,7 +3,7 @@
 import clsx from "clsx";
 import css from "./Header.module.css";
 
-import Logo from "@/components/Logo/logo.svg";
+import Logo from "@/components/Logo/Logo";
 
 import { CiMenuBurger } from "react-icons/ci";
 import { AiOutlineClose } from "react-icons/ai";
@@ -21,7 +21,6 @@ export default function Header() {
       document.documentElement.classList.remove("no-scroll");
     }
 
-    console.log(Logo.src);
     return () => {
       document.documentElement.classList.remove("no-scroll");
     };
@@ -31,9 +30,7 @@ export default function Header() {
     <header className={css.header}>
       <nav className={css.headerNav}>
         <Link className={css.logo} href="/">
-          <svg>
-            <use href={Logo.src}></use>
-          </svg>
+          <Logo />
           VG.dev
         </Link>
         <ul className={css.navList}>
@@ -54,9 +51,7 @@ export default function Header() {
       <div className={clsx(css.mobileMenu, toggleMenu && css.mobileMenuActive)}>
         <div className={css.mobileMenuHeader}>
           <Link className={css.logo} href="/">
-            <svg>
-              <use href={Logo.src}></use>
-            </svg>
+            <Logo />
             VG.dev
           </Link>
           <button
