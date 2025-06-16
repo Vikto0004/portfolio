@@ -342,6 +342,7 @@ section {
   width: 100%;
   border-radius: var(--border-radius-primary);
   object-fit: cover;
+  flex: 1;
 }
 
 @media (max-width: 1280px) {
