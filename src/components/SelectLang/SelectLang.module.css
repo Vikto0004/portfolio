@@ -1,0 +1,65 @@
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 4px;
+  padding: 4px;
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+  color: var(--text-primary);
+  cursor: pointer;
+  outline: none;
+  transition: color 0.3s ease;
+}
+
+.button:focus,
+.button:hover {
+  color: var(--primary-hover);
+  outline: none;
+}
+
+.button svg {
+  transition: transform 0.3s ease;
+}
+
+.listboxIconActive {
+  transform: rotate(-180deg);
+}
+
+.listboxOptions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  border: 1px solid var(--text-secondary);
+  border-radius: 12px 0 12px 12px;
+  padding: 24px 10px;
+  background: var(--secondary-background);
+  z-index: 1001;
+  outline: none;
+}
+
+.link {
+  font-size: 18px;
+  color: var(--text);
+  padding: 5px 30px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+
+.link:focus,
+.link:hover {
+  color: var(--primary-hover);
+}
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 15%);
+  transition: 0.3s;
+  z-index: 1000;
+}

@@ -1,0 +1,27 @@
+{
+  "Hero": {
+    "title": "Web Development That Drives Results",
+    "description": "I build fast, responsive, and modern websites for small businesses, startups, and agencies. Get a website that looks professional, loads quickly, and helps your business grow.",
+    "buttonText": "View Services",
+    "statsList": {
+      "clients": "Happy Clients",
+      "projects": "Projects Completed",
+      "responsibility": "Commitment to Quality"
+    }
+  },
+  "Services": {
+    "sectionName": "My Services",
+    "title": "Web Development That Delivers",
+    "description": "I offer fast, high-quality web development using modern technologies like React and Next.js. From design to deployment — I’ve got you covered."
+  },
+  "Technology": {
+    "sectionName": "Technologies",
+    "title": "Technologies I Work With",
+    "description": "I use a modern tech stack to build efficient, responsive, and high-performance web solutions. Every tool I use has been tested in real-world projects and helps deliver stable results in both front-end and back-end development."
+  },
+  "History": {
+    "sectionName": "My Journey",
+    "title": "How I Became a Web Developer",
+    "description": "Every project in my portfolio is the result of personal growth, team collaboration, and continuous learning. From the first steps to commercial practice, I strive to create websites that not only look good but also work effectively."
+  }
+}

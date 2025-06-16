@@ -1,0 +1,24 @@
+.swiperNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  width: 100%;
+  margin-top: 50px;
+}
+
+.swiperNav:has(.swiper-button-lock) {
+  display: none;
+}
+
+div.swiperButtonPrev,
+div.swiperButtonNext {
+  position: static;
+  color: var(--text-primary);
+  margin: 0;
+}
+
+div.swiperButtonPrev:after,
+div.swiperButtonNext:after {
+  font-size: 20px;
+}

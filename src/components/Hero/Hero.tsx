@@ -1,12 +1,17 @@
 "use client";
 
-import { useEffect } from "react";
-import css from "./Hero.module.css";
-import heroImg from "../../../public/images/hero-img.jpeg";
-import Image from "next/image";
 import clsx from "clsx";
+import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { useEffect } from "react";
+
+import heroImg from "../../../public/images/hero-img.jpeg";
+
+import css from "./Hero.module.css";
 
 export default function Hero() {
+  const t = useTranslations("Hero");
+
   function animateValue(el: HTMLElement, end: number, duration = 2000) {
     const start = 0;
     const range = end - start;
@@ -35,13 +40,13 @@ export default function Hero() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const statItems = entry.target.querySelectorAll<HTMLElement>(
-              `.${css.statsItemSubtitle}`
+              `.${css.statsItemSubtitle}`,
             );
 
             statItems.forEach((item) => {
               const target = parseInt(
                 item.getAttribute("data-target") || "0",
-                10
+                10,
               );
               if (!item.classList.contains("animated")) {
                 animateValue(item, target);
@@ -53,7 +58,7 @@ export default function Hero() {
           }
         });
       },
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
 
     const statsList = document.querySelector(`.${css.statsList}`);
@@ -70,43 +75,40 @@ export default function Hero() {
     <section className={css.hero}>
       <div className="container container-flex">
         <div className={css.heroContent}>
-          <h1 className={css.heroTitle}>Empowering Your Financial Future</h1>
-          <p className={clsx(css.heroDescr, "descr")}>
-            Discover the path to financial literacy and stability. Learn modern
-            approaches to income determination, budget planning, and investment
-            strategies to achieve your financial goals.
-          </p>
-          <a href="#our-services" className="primary-btn">
-            Learn More
+          <h1 className={css.heroTitle}>{t("title")}</h1>
+          <p className={clsx(css.heroDescr, "descr")}>{t("description")}</p>
+          <a href="#services" className="primary-btn">
+            {t("buttonText")}
           </a>
         </div>
         <div className="wrapper">
-          <Image src={heroImg} alt="hero image" className="wrapper-img" />
+          <Image
+            src={heroImg}
+            width={500}
+            height={500}
+            priority
+            alt="Viktor — web developer"
+            className="wrapper-img"
+          />
         </div>
         <ul className={css.statsList}>
           <li className={css.statsItem}>
-            <h3 className={css.statsItemSubtitle} data-target="95">
-              0<span>%</span>
-            </h3>
-            <p className="descr">Financial literacy improvement</p>
-          </li>
-          <li className={css.statsItem}>
-            <h3 className={css.statsItemSubtitle} data-target="50">
-              0<span>M</span>
-            </h3>
-            <p className="descr">Savings and investments managed</p>
-          </li>
-          <li className={css.statsItem}>
-            <h3 className={css.statsItemSubtitle} data-target="200">
+            <h3 className={css.statsItemSubtitle} data-target="14">
               0<span>+</span>
             </h3>
-            <p className="descr">Expert advisors</p>
+            <p className="descr">{t("statsList.clients")}</p>
           </li>
           <li className={css.statsItem}>
-            <h3 className={css.statsItemSubtitle} data-target="300">
+            <h3 className={css.statsItemSubtitle} data-target="16">
+              0
+            </h3>
+            <p className="descr">{t("statsList.projects")}</p>
+          </li>
+          <li className={css.statsItem}>
+            <h3 className={css.statsItemSubtitle} data-target="100">
               0<span>%</span>
             </h3>
-            <p className="descr">Investment growth achieved</p>
+            <p className="descr">{t("statsList.responsibility")}</p>
           </li>
         </ul>
       </div>

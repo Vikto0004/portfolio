@@ -1,0 +1,38 @@
+.technology {
+  padding: 100px 0;
+  position: relative;
+}
+
+.technology::before {
+  content: "";
+  position: absolute;
+  bottom: 30px;
+  right: 160px;
+  width: 100px;
+  height: 27px;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    var(--accordion-active) 100%
+  );
+  border-top-right-radius: var(--border-radius-primary);
+  border-bottom-right-radius: var(--border-radius-primary);
+  z-index: -1;
+}
+
+.technology::after {
+  content: "";
+  position: absolute;
+  top: 200px;
+  left: 70px;
+  width: 100px;
+  height: 27px;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    var(--accordion-active) 100%
+  );
+  border-top-right-radius: var(--border-radius-primary);
+  border-bottom-right-radius: var(--border-radius-primary);
+  z-index: -1;
+}

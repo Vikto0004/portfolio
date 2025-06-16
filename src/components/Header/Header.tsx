@@ -1,15 +1,16 @@
 "use client";
 
 import clsx from "clsx";
-import css from "./Header.module.css";
+import Link from "next/link";
+import { useEffect, useState } from "react";
+import { AiOutlineClose } from "react-icons/ai";
+import { CiMenuBurger } from "react-icons/ci";
 
 import Logo from "@/components/Logo/Logo";
 
-import { CiMenuBurger } from "react-icons/ci";
-import { AiOutlineClose } from "react-icons/ai";
+import SelectLang from "../SelectLang/SelectLang";
 
-import { useEffect, useState } from "react";
-import Link from "next/link";
+import css from "./Header.module.css";
 
 export default function Header() {
   const [toggleMenu, setToggleMenu] = useState(false);
@@ -45,6 +46,7 @@ export default function Header() {
           Contact
         </Link>
       </nav>
+      <SelectLang />
       <button className={css.burger} onClick={() => setToggleMenu(!toggleMenu)}>
         <CiMenuBurger />
       </button>

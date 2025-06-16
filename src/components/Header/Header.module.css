@@ -2,7 +2,7 @@
   position: relative;
   display: flex;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: center;
   gap: 90px;
   padding: 20px 35px 20px;
   width: 100%;

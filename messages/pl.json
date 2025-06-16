@@ -1,0 +1,27 @@
+{
+  "Hero": {
+    "title": "Tworzenie Stron, Które Przynoszą Wyniki",
+    "description": "Tworzę szybkie, responsywne i nowoczesne strony internetowe dla małych firm, startupów i agencji. Otrzymaj stronę, która wygląda profesjonalnie, szybko się ładuje i wspiera rozwój Twojego biznesu.",
+    "buttonText": "Zobacz Usługi",
+    "statsList": {
+      "clients": "Zadowoleni Klienci",
+      "projects": "Zrealizowane Projekty",
+      "responsibility": "Odpowiedzialność za Jakość"
+    }
+  },
+  "Services": {
+    "sectionName": "Moje Usługi",
+    "title": "Tworzenie Stron, Które Przynoszą Efekty",
+    "description": "Oferuję szybkie i wysokiej jakości tworzenie stron internetowych z wykorzystaniem nowoczesnych technologii, takich jak React i Next.js. Od projektu po wdrożenie — wszystkim się zajmuję."
+  },
+  "Technology": {
+    "sectionName": "Technologie",
+    "title": "Technologie, z których korzystam",
+    "description": "Korzystam z nowoczesnego stosu technologicznego do tworzenia wydajnych, responsywnych i szybkich rozwiązań internetowych. Wszystkie narzędzia, z których korzystam, zostały sprawdzone w rzeczywistych projektach i pozwalają osiągać stabilne rezultaty zarówno w frontendzie, jak i backendzie."
+  },
+  "History": {
+    "sectionName": "Moja droga",
+    "title": "Jak zostałem webdeveloperem",
+    "description": "Każdy projekt w moim portfolio jest wynikiem osobistego rozwoju, współpracy zespołowej oraz ciągłego uczenia się. Od pierwszych kroków po praktykę komercyjną, dążę do tworzenia stron, które nie tylko dobrze wyglądają, ale także działają efektywnie."
+  }
+}

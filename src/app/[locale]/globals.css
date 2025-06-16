@@ -344,17 +344,31 @@ section {
   object-fit: cover;
 }
 
+@media (max-width: 1280px) {
+  .container {
+    padding: 0 50px;
+  }
+
+  .container-flex {
+    gap: 40px 50px;
+  }
+
+  .wrapper {
+    width: calc((100% - 50px) / 2);
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .container {
     padding: 0 15px;
   }
 
   .container-flex {
-    gap: 40px 60px;
+    gap: 40px;
   }
 
   .wrapper {
-    width: calc((100% - 60px) / 2);
+    width: calc((100% - 40px) / 2);
   }
 
   .title {

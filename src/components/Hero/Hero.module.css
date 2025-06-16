@@ -65,7 +65,7 @@
 }
 
 .statsItem {
-  width: calc((100% - 135px) / 4);
+  width: calc((100% - 90px) / 3);
   text-align: center;
 }
 
@@ -78,13 +78,15 @@
   color: var(--primary-color);
 }
 
+@media (max-width: 1280px) {
+  .heroContent {
+    width: calc((100% - 50px) / 2);
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .heroContent {
-    width: calc((100% - 60px) / 2);
-  }
-
-  .statsItem {
-    width: calc((100% - 45px) / 2);
+    width: calc((100% - 40px) / 2);
   }
 }
 
@@ -96,6 +98,10 @@
 
   .heroTitle {
     font-size: 54px;
+  }
+
+  .statsItem {
+    width: calc((100% - 45px) / 2);
   }
 }
 
