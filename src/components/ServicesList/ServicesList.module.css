@@ -16,7 +16,7 @@
 .servicesItemWrap {
   display: flex;
   justify-content: space-between;
-  align-items: start;
+  align-items: flex-start;
   gap: 10px;
   padding: 20px 20px 0 20px;
   margin-bottom: 14px;
@@ -24,7 +24,7 @@
 }
 
 .servicesItemWrap::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 0;
   left: 0;
