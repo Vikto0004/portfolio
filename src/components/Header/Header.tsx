@@ -1,29 +1,31 @@
-"use client";
+'use client';
 
-import clsx from "clsx";
-import Link from "next/link";
-import { useEffect, useState } from "react";
-import { AiOutlineClose } from "react-icons/ai";
-import { CiMenuBurger } from "react-icons/ci";
+import clsx from 'clsx';
+import { useTranslations } from 'next-intl';
+import { useEffect, useState } from 'react';
+import { AiOutlineClose } from 'react-icons/ai';
+import { CiMenuBurger } from 'react-icons/ci';
 
-import Logo from "@/components/Logo/Logo";
+import Logo from '@/components/Logo/Logo';
+import { Link } from '@/i18n/navigation';
 
-import SelectLang from "../SelectLang/SelectLang";
+import SelectLang from '../SelectLang/SelectLang';
 
-import css from "./Header.module.css";
+import css from './Header.module.css';
 
 export default function Header() {
   const [toggleMenu, setToggleMenu] = useState(false);
+  const t = useTranslations('Header');
 
   useEffect(() => {
     if (toggleMenu) {
-      document.documentElement.classList.add("no-scroll");
+      document.documentElement.classList.add('no-scroll');
     } else {
-      document.documentElement.classList.remove("no-scroll");
+      document.documentElement.classList.remove('no-scroll');
     }
 
     return () => {
-      document.documentElement.classList.remove("no-scroll");
+      document.documentElement.classList.remove('no-scroll');
     };
   }, [toggleMenu]);
 
@@ -36,17 +38,17 @@ export default function Header() {
         </Link>
         <ul className={css.navList}>
           <li>
-            <Link href="/">Home</Link>
+            <Link href="/">{t('home')}</Link>
           </li>
           <li>
-            <Link href="/projects">Projects</Link>
+            <Link href="/projects">{t('projects')}</Link>
           </li>
         </ul>
-        <Link className={clsx(css.navListLink, "primary-btn")} href="/contact">
-          Contact
+        <SelectLang />
+        <Link className={clsx(css.navListLink, 'primary-btn')} href="/contact">
+          {t('contact')}
         </Link>
       </nav>
-      <SelectLang />
       <button className={css.burger} onClick={() => setToggleMenu(!toggleMenu)}>
         <CiMenuBurger />
       </button>
@@ -56,25 +58,26 @@ export default function Header() {
             <Logo />
             VG.dev
           </Link>
-          <button
-            className={css.closeBtn}
-            onClick={() => setToggleMenu(!toggleMenu)}
-          >
+          <button className={css.closeBtn} onClick={() => setToggleMenu(!toggleMenu)}>
             <AiOutlineClose />
           </button>
         </div>
         <nav className={css.mobileNav}>
           <ul className={css.mobileNavList}>
             <li>
-              <Link href="/">Home</Link>
+              <Link onClick={() => setToggleMenu(!toggleMenu)} href="/">
+                {t('home')}
+              </Link>
             </li>
             <li>
-              <Link href="/projects">Projects</Link>
+              <Link onClick={() => setToggleMenu(!toggleMenu)} href="/projects">
+                {t('projects')}
+              </Link>
             </li>
           </ul>
         </nav>
-        <Link className="primary-btn" href="/contact">
-          Contact
+        <Link onClick={() => setToggleMenu(!toggleMenu)} className="primary-btn" href="/contact">
+          {t('contact')}
         </Link>
       </div>
     </header>

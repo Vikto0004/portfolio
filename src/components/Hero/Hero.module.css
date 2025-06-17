@@ -83,6 +83,10 @@
 }
 
 @media screen and (max-width: 768px) {
+  .hero {
+    padding: 50px 0;
+  }
+
   .heroContent {
     width: 100%;
     padding: 0;

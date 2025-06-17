@@ -12,7 +12,7 @@
 }
 
 .header::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   left: 25px;
@@ -68,6 +68,7 @@
 .navList a {
   transition: all 0.3s ease;
   color: var(--text-primary);
+  font-size: 18px;
   position: relative;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
@@ -90,7 +91,7 @@
 }
 
 .navList a::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: -4px;
   left: 50%;
@@ -107,8 +108,9 @@
 
 @media screen and (max-width: 1024px) {
   .header {
-    padding: 10px 25px;
+    padding: 15px 25px 10px;
     justify-content: end;
+    gap: 40px;
   }
 
   .navListLink,

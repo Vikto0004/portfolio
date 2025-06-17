@@ -1,4 +1,9 @@
 {
+  "Header": {
+    "home": "Strona Główna",
+    "projects": "Projekty",
+    "contact": "Kontakt"
+  },
   "Hero": {
     "title": "Tworzenie Stron, Które Przynoszą Wyniki",
     "description": "Tworzę szybkie, responsywne i nowoczesne strony internetowe dla małych firm, startupów i agencji. Otrzymaj stronę, która wygląda profesjonalnie, szybko się ładuje i wspiera rozwój Twojego biznesu.",

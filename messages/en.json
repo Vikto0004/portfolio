@@ -1,4 +1,9 @@
 {
+  "Header": {
+    "home": "Home",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
   "Hero": {
     "title": "Web Development That Drives Results",
     "description": "I build fast, responsive, and modern websites for small businesses, startups, and agencies. Get a website that looks professional, loads quickly, and helps your business grow.",
