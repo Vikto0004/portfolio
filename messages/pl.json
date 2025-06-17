@@ -23,5 +23,19 @@
     "sectionName": "Moja droga",
     "title": "Jak zostałem webdeveloperem",
     "description": "Każdy projekt w moim portfolio jest wynikiem osobistego rozwoju, współpracy zespołowej oraz ciągłego uczenia się. Od pierwszych kroków po praktykę komercyjną, dążę do tworzenia stron, które nie tylko dobrze wyglądają, ale także działają efektywnie."
+  },
+  "Projects": {
+    "sectionName": "Projekty",
+    "title": "Rozwiązania zrodzone z pomysłu",
+    "description": "Responsywne landing page, blogi, inicjatywy wolontariackie i platformy doradcze. Wśród projektów są serwisy samochodowe, edukacja, działalność charytatywna, AI i nieruchomości. Głównie projekty solowe z unikalnym designem i szybką realizacją. Zobacz wybrane realizacje lub pełną listę.",
+    "buttonText": "Zobacz wszystkie projekty",
+    "linkText": "Czytaj dalej"
+  },
+  "Project": {
+    "buttonText": "Skontaktuj się ze mną",
+    "responsibilities": "Obowiązki",
+    "technologies": "Technologie",
+    "workSummary": "Podsumowanie pracy",
+    "linkText": "Link do strony"
   }
 }

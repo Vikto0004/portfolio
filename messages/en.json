@@ -23,5 +23,19 @@
     "sectionName": "My Journey",
     "title": "How I Became a Web Developer",
     "description": "Every project in my portfolio is the result of personal growth, team collaboration, and continuous learning. From the first steps to commercial practice, I strive to create websites that not only look good but also work effectively."
+  },
+  "Projects": {
+    "sectionName": "Projects",
+    "title": "Solutions Born from Ideas",
+    "description": "Responsive landing pages, blogs, volunteer initiatives, and consulting platforms. Our projects include car services, education, charity, AI, and real estate. Mostly solo cases with unique design and fast delivery. Explore selected works or browse the full list.",
+    "buttonText": "View All Projects",
+    "linkText": "Read more"
+  },
+  "Project": {
+    "buttonText": "Contact Me",
+    "responsibilities": "Responsibilities",
+    "technologies": "Technologies",
+    "workSummary": "Work Summary",
+    "linkText": "Site Link"
   }
 }

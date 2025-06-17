@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -21,8 +21,8 @@ html {
 
   --card-mask-url: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 68 51' preserveAspectRatio='none'><path d='M 0 3 C 0 3 0 3 0 3 L 0 38 C 0 40 2 41 4 41 L 50 41 C 55 41 59 42 62 47 C 64 51 66 51 66 51 C 68 51 68 48 68 46 L 68 3 C 68 1 66 0 64 0 L 4 0 C 2 0 0 1 0 3' fill='white'/></svg>");
 
-  --font-family: "PT Sans", sans-serif;
-  --secondary-family: "Cormorant Garamond", serif;
+  --font-family: 'PT Sans', sans-serif;
+  --secondary-family: 'Cormorant Garamond', serif;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -154,11 +154,7 @@ section {
 }
 
 .section-name.left {
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 10%,
-    var(--accordion-active) 100%
-  );
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, var(--accordion-active) 100%);
   border-top-right-radius: var(--border-radius-primary);
   border-bottom-right-radius: var(--border-radius-primary);
 }
@@ -242,6 +238,10 @@ section {
 }
 
 .link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
   font-size: 20px;
   color: var(--primary-color);
   text-decoration: none;
@@ -251,7 +251,7 @@ section {
 }
 
 .link::after {
-  content: " ";
+  content: ' ';
   width: 100%;
   height: 1px;
   background: var(--primary-color);
@@ -262,7 +262,7 @@ section {
 }
 
 .link::before {
-  content: " ";
+  content: ' ';
   width: 4px;
   height: 4px;
   background: var(--primary-color);
@@ -307,7 +307,6 @@ section {
   position: relative;
 
   height: auto;
-  min-height: 520px;
   max-height: 600px;
   width: calc((100% - 100px) / 2);
   padding: 20px;
@@ -316,7 +315,7 @@ section {
 }
 
 .wrapper::before {
-  content: "";
+  content: '';
   position: absolute;
   top: -24px;
   left: 50%;
@@ -328,7 +327,7 @@ section {
 }
 
 .wrapper::after {
-  content: "";
+  content: '';
   position: absolute;
   top: 8px;
   left: 8px;
@@ -373,7 +372,7 @@ section {
   }
 
   .title {
-    font-size: 34px;
+    font-size: 46px;
   }
 
   .title span {

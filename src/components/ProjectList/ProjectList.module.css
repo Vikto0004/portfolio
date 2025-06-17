@@ -1,0 +1,22 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 10px;
+  border-radius: var(--border-radius-secondary);
+  background-color: var(--secondary-background);
+}
+
+.itemText {
+  font-size: 16px;
+}
+
+.itemBullet {
+  color: var(--primary-color);
+}

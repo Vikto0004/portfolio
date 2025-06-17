@@ -1,0 +1,84 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 50px;
+  width: 100%;
+}
+
+.item {
+  width: calc((100% - 50px) / 2);
+}
+
+.item {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  text-align: flex-start;
+  background-color: var(--secondary-background);
+  border-bottom-right-radius: var(--border-radius-primary);
+  border-bottom-left-radius: var(--border-radius-primary);
+}
+
+.itemWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: var(--primary-color);
+}
+
+.itemInfo {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 5px 30px;
+  padding: 5px 20px;
+}
+
+.itemAuthor,
+.itemDate {
+  position: relative;
+}
+
+.itemAuthor::after,
+.itemDate::after {
+  content: '|';
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: -17px;
+  height: auto;
+  color: var(--text-primary);
+}
+
+.itemImage {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.itemContent {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  flex: 1;
+  padding: 20px 30px 30px;
+}
+
+.itemContentSubtitle {
+  margin-bottom: 8px;
+}
+
+.itemContentDescr {
+  margin-bottom: 25px;
+}
+
+.itemContentLink {
+  margin-top: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .item {
+    width: 100%;
+  }
+}
