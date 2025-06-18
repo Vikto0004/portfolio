@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import Image from 'next/image';
 
 import { services } from '@/components/data/servicesData';
-import { useValidLang } from '@/utils/hooks';
+import { useValidLang } from '@/utils/hooks/valid-lang';
 
 import css from './ServicesList.module.css';
 

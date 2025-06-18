@@ -8,26 +8,16 @@ import { CiMenuBurger } from 'react-icons/ci';
 
 import Logo from '@/components/Logo/Logo';
 import { Link } from '@/i18n/navigation';
+import { useNoScroll } from '@/utils/hooks/no-scroll';
 
 import SelectLang from '../SelectLang/SelectLang';
 
 import css from './Header.module.css';
 
 export default function Header() {
-  const [toggleMenu, setToggleMenu] = useState(false);
   const t = useTranslations('Header');
-
-  useEffect(() => {
-    if (toggleMenu) {
-      document.documentElement.classList.add('no-scroll');
-    } else {
-      document.documentElement.classList.remove('no-scroll');
-    }
-
-    return () => {
-      document.documentElement.classList.remove('no-scroll');
-    };
-  }, [toggleMenu]);
+  const [toggleMenu, setToggleMenu] = useState(false);
+  useNoScroll(toggleMenu);
 
   return (
     <header className={css.header}>

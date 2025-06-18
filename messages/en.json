@@ -69,6 +69,11 @@
         "min": "Message must be at least 10 characters"
       }
     },
-    "buttonText": "Send Message"
+    "buttonText": "Send Message",
+    "modal": {
+      "success": "Message sent successfully!",
+      "error": "An error occurred while sending the message. Please try again later.",
+      "close": "Close"
+    }
   }
 }

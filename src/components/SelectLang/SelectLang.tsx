@@ -1,16 +1,11 @@
-import {
-  Listbox,
-  ListboxButton,
-  ListboxOption,
-  ListboxOptions,
-} from "@headlessui/react";
-import { IoChevronDown } from "react-icons/io5";
+import { Listbox, ListboxButton, ListboxOption, ListboxOptions } from '@headlessui/react';
+import { IoChevronDown } from 'react-icons/io5';
 
-import { usePathname, useRouter } from "@/i18n/navigation";
-import { langs, LangType } from "@/i18n/routing";
-import { useValidLang } from "@/utils/hooks";
+import { usePathname, useRouter } from '@/i18n/navigation';
+import { langs, LangType } from '@/i18n/routing';
+import { useValidLang } from '@/utils/hooks/valid-lang';
 
-import css from "./SelectLang.module.css";
+import css from './SelectLang.module.css';
 
 export default function SelectLang() {
   const lang = useValidLang();
@@ -35,7 +30,7 @@ export default function SelectLang() {
           {open && <div className={css.overlay}></div>}
           <ListboxButton className={css.button}>
             {lang.toUpperCase()}
-            <IoChevronDown className={open ? css.listboxIconActive : ""} />
+            <IoChevronDown className={open ? css.listboxIconActive : ''} />
           </ListboxButton>
           <ListboxOptions className={css.listboxOptions} anchor="bottom end">
             {langs.map((lang, index) => (

@@ -69,6 +69,11 @@
         "min": "Wiadomość musi zawierać co najmniej 10 znaków"
       }
     },
-    "buttonText": "Wyślij wiadomość"
+    "buttonText": "Wyślij wiadomość",
+    "modal": {
+      "success": "Wiadomość została wysłana!",
+      "error": "Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie później.",
+      "close": "Zamknij"
+    }
   }
 }

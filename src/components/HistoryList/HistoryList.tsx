@@ -1,11 +1,11 @@
-import clsx from "clsx";
+import clsx from 'clsx';
 
-import { useValidLang } from "@/utils/hooks";
+import { useValidLang } from '@/utils/hooks/valid-lang';
 
-import "swiper/css";
-import { historyItems } from "../data/historyData";
+import 'swiper/css';
+import { historyItems } from '../data/historyData';
 
-import css from "./HistoryList.module.css";
+import css from './HistoryList.module.css';
 
 export default function HistoryList() {
   const lang = useValidLang();
@@ -13,7 +13,7 @@ export default function HistoryList() {
   return (
     <ul className="swiper-wrapper">
       {historyItems.map(({ key, year, translations }) => (
-        <li key={key} className={clsx(css.historyItem, "swiper-slide")}>
+        <li key={key} className={clsx(css.historyItem, 'swiper-slide')}>
           <div className={css.historyItemWrap}>
             <span>{year}</span>
           </div>

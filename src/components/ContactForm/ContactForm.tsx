@@ -2,7 +2,12 @@
 
 import { Formik, Form, Field, ErrorMessage, FormikHelpers } from 'formik';
 import { useTranslations } from 'next-intl';
+import { useState } from 'react';
 import * as Yup from 'yup';
+
+import { useNoScroll } from '@/utils/hooks/no-scroll';
+
+import Loader from '../Loader/Loader';
 
 import css from './ContactForm.module.css';
 
@@ -19,6 +24,8 @@ interface StatusType {
 
 export default function ContactForm() {
   const t = useTranslations('ContactForm');
+  const [isOpen, setIsOpen] = useState(false);
+  useNoScroll(isOpen);
 
   const validationSchema = Yup.object({
     name: Yup.string()
@@ -50,8 +57,9 @@ export default function ContactForm() {
 
       if (!res.ok) throw new Error('Помилка при відправці листа');
 
-      setStatus({ success: true });
       resetForm();
+      setStatus({ success: true });
+      setIsOpen(true);
     } catch (error: any) {
       setStatus({ success: false, message: error.message });
     } finally {
@@ -65,7 +73,7 @@ export default function ContactForm() {
       validationSchema={validationSchema}
       onSubmit={handleSubmit}
     >
-      {({ status }) => (
+      {({ status, isSubmitting }) => (
         <Form className={css.form}>
           <div className={css.formGroup}>
             <label className={css.label} htmlFor="name">
@@ -91,13 +99,35 @@ export default function ContactForm() {
             <ErrorMessage name="message" component="div" className={css.formError} />
           </div>
 
-          <button type="submit" className="primary-btn">
-            {t('buttonText')}
+          <button type="submit" className="primary-btn" disabled={isSubmitting}>
+            {isSubmitting ? 'Відправка...' : t('buttonText')}
           </button>
 
-          {status && status.success && <div className={css.success}>Лист відправлено успішно!</div>}
-          {status && status.success === false && (
-            <div className={css.error}>Помилка: {status.message}</div>
+          {isSubmitting && <Loader />}
+
+          {status?.success && isOpen && (
+            <div className={css.overlay} onClick={() => setIsOpen(false)}>
+              <div className={css.success} onClick={(e) => e.stopPropagation()}>
+                <h3 className="subtitle">{t('modal.success')}</h3>
+                <button className="primary-btn" onClick={() => setIsOpen(false)}>
+                  {t('modal.close')}
+                </button>
+              </div>
+            </div>
+          )}
+
+          {status?.success === false && isOpen && (
+            <div className={css.overlay} onClick={() => setIsOpen(false)}>
+              <div className={css.error} onClick={(e) => e.stopPropagation()}>
+                <h3 className="subtitle">
+                  {t('modal.error')} <br />
+                  {status.message}
+                </h3>
+                <button className="primary-btn" onClick={() => setIsOpen(false)}>
+                  {t('modal.close')}
+                </button>
+              </div>
+            </div>
           )}
         </Form>
       )}

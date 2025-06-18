@@ -3,7 +3,7 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
 import { Link } from '@/i18n/navigation';
-import { useValidLang } from '@/utils/hooks';
+import { useValidLang } from '@/utils/hooks/valid-lang';
 
 import { projectsData } from '../data/projectsData';
 

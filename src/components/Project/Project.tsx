@@ -5,7 +5,7 @@ import { FaGithub } from 'react-icons/fa';
 import { FiLink } from 'react-icons/fi';
 
 import { Link } from '@/i18n/navigation';
-import { useValidLang } from '@/utils/hooks';
+import { useValidLang } from '@/utils/hooks/valid-lang';
 
 import ProjectList from '../ProjectList/ProjectList';
 

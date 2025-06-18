@@ -33,6 +33,7 @@
 .itemContent {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 6px;
   width: calc(100% - 155px);
 }
