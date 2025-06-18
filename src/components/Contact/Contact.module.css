@@ -1,0 +1,37 @@
+.contact {
+  padding: 100px 0;
+}
+
+.content {
+  margin: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+
+  width: calc((100% - 100px) / 2);
+}
+
+@media (max-width: 1280px) {
+  .wrapper {
+    width: calc((100% - 50px) / 2);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .wrapper {
+    width: calc((100% - 40px) / 2);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper {
+    width: 100%;
+  }
+
+  .descr {
+    text-align: center;
+  }
+}

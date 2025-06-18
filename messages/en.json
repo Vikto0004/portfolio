@@ -42,5 +42,33 @@
     "technologies": "Technologies",
     "workSummary": "Work Summary",
     "linkText": "Site Link"
+  },
+  "Contact": {
+    "sectionName": "Contact",
+    "title": "Get in Touch",
+    "description": "Ready to collaborate? I'm open to new projects and always happy to discuss your ideas. Write to me and I'll respond within 24 hours."
+  },
+  "ContactForm": {
+    "labels": {
+      "name": "Full Name",
+      "email": "Email Address",
+      "message": "Message"
+    },
+    "validation": {
+      "name": {
+        "required": "This field is required",
+        "min": "Name must be at least 2 characters",
+        "invalid": "Invalid characters"
+      },
+      "email": {
+        "required": "This field is required",
+        "invalid": "Invalid email format"
+      },
+      "message": {
+        "required": "This field is required",
+        "min": "Message must be at least 10 characters"
+      }
+    },
+    "buttonText": "Send Message"
   }
 }

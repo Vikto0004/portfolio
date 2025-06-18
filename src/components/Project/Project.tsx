@@ -86,11 +86,11 @@ export default function Project({ project }: Props) {
               {project.translations[lang].workSummary}
             </p>
             <div className={css.projectMeta}>
-              <Link href={project.githubLink} className="link">
+              <Link href={project.githubLink} className="link" target="_blank">
                 <FaGithub />
                 GitHub
               </Link>
-              <Link href={project.siteLink} className="link">
+              <Link href={project.siteLink} className="link" target="_blank">
                 <FiLink />
                 {t('linkText')}
               </Link>

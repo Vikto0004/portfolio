@@ -42,5 +42,33 @@
     "technologies": "Technologie",
     "workSummary": "Podsumowanie pracy",
     "linkText": "Link do strony"
+  },
+  "Contact": {
+    "sectionName": "Kontakt",
+    "title": "Skontaktuj się ze mną",
+    "description": "Gotowy do współpracy? Jestem otwarty na nowe projekty i zawsze chętnie omówię Twoje pomysły. Napisz do mnie, a odpowiem w ciągu 24 godzin."
+  },
+  "ContactForm": {
+    "labels": {
+      "name": "Imię i nazwisko",
+      "email": "Adres e-mail",
+      "message": "Wiadomość"
+    },
+    "validation": {
+      "name": {
+        "required": "To pole jest wymagane",
+        "min": "Imię musi zawierać co najmniej 2 znaki",
+        "invalid": "Nieprawidłowe znaki"
+      },
+      "email": {
+        "required": "To pole jest wymagane",
+        "invalid": "Nieprawidłowy format adresu e-mail"
+      },
+      "message": {
+        "required": "To pole jest wymagane",
+        "min": "Wiadomość musi zawierać co najmniej 10 znaków"
+      }
+    },
+    "buttonText": "Wyślij wiadomość"
   }
 }

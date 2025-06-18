@@ -90,6 +90,11 @@
 }
 
 @media screen and (max-width: 768px) {
+  .sectionName {
+    font-size: 10px;
+    text-align: justify;
+  }
+
   .projectContent {
     flex-direction: column-reverse;
   }
