@@ -75,5 +75,23 @@
       "error": "An error occurred while sending the message. Please try again later.",
       "close": "Close"
     }
+  },
+  "Footer": {
+    "menu": {
+      "title": "Menu",
+      "home": "Home",
+      "projects": "Projects",
+      "contact": "Contact"
+    },
+    "services": {
+      "title": "Service pages",
+      "cookiPolicy": "Cookie Policy",
+      "privacyPolicy": "Privacy Policy",
+      "termsOfUse": "Terms of Use"
+    },
+    "social": {
+      "title": "Social Media"
+    },
+    "rights": "All rights reserved. Crafted with love for web development."
   }
 }

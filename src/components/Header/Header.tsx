@@ -2,7 +2,7 @@
 
 import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { AiOutlineClose } from 'react-icons/ai';
 import { CiMenuBurger } from 'react-icons/ci';
 

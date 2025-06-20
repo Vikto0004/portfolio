@@ -1,5 +1,14 @@
 .projects {
-  padding: 100px 0 160px;
+  padding: 100px 0 120px;
+}
+
+.container {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .link {
@@ -8,6 +17,6 @@
 
 @media screen and (max-width: 768px) {
   .projects {
-    padding: 80px 0 120px;
+    padding: 80px 0 100px;
   }
 }

@@ -75,5 +75,23 @@
       "error": "Wystąpił błąd podczas wysyłania wiadomości. Spróbuj ponownie później.",
       "close": "Zamknij"
     }
+  },
+  "Footer": {
+    "menu": {
+      "title": "Menu",
+      "home": "Strona główna",
+      "projects": "Projekty",
+      "contact": "Kontakt"
+    },
+    "services": {
+      "title": "Strony serwisowe",
+      "cookiPolicy": "Polityka plików cookie",
+      "privacyPolicy": "Polityka prywatności",
+      "termsOfUse": "Warunki korzystania"
+    },
+    "social": {
+      "title": "Media społecznościowe"
+    },
+    "rights": "Wszelkie prawa zastrzeżone. Stworzone z miłością do tworzenia stron internetowych."
   }
 }

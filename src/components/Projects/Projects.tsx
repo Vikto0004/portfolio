@@ -12,7 +12,7 @@ export default function Projects({ ProjectsPage }: { ProjectsPage?: boolean }) {
 
   return (
     <section className={css.projects}>
-      <div className="container content-center">
+      <div className={clsx(css.container, 'container')}>
         <div className="content-center">
           <p className="section-name">{t('sectionName')}</p>
           <h2 className="title">{t('title')}</h2>

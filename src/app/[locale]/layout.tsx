@@ -4,6 +4,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 import { NextIntlClientProvider, hasLocale } from 'next-intl';
 
+import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
 import { routing } from '@/i18n/routing';
 
@@ -33,6 +34,7 @@ export default async function RootLayout({ children, params }: Props) {
         <NextIntlClientProvider>
           <Header />
           <main>{children}</main>
+          <Footer />
         </NextIntlClientProvider>
       </body>
     </html>
