@@ -6,10 +6,10 @@ services:
       - 8055:8055
     volumes:
       - ./directus-data:/data
-    environment:
-      KEY: 'some-random-key'
-      SECRET: 'some-secret-key'
-      ADMIN_EMAIL: 'vikto0004@gmail.com'
-      ADMIN_PASSWORD: '20040910abc'
-      DB_CLIENT: 'pg'
-      DB_CONNECTION_STRING: 'postgresql://postgres:DucylzpPGmUBifpECZvZTdTAezFbbzAC@nozomi.proxy.rlwy.net:16233/railway'
+  environment:
+  KEY: ${KEY}
+  SECRET: ${SECRET}
+  ADMIN_EMAIL: ${ADMIN_EMAIL}
+  ADMIN_PASSWORD: ${ADMIN_PASSWORD}
+  DB_CLIENT: 'pg'
+  DB_CONNECTION_STRING: ${DB_CONNECTION_STRING}

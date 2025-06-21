@@ -5,8 +5,9 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { useValidLang } from '@/utils/hooks/valid-lang';
 
-import css from './ProjectsList.module.css';
 import { Project } from '../Project/Project';
+
+import css from './ProjectsList.module.css';
 
 type PropsType = {
   projects: Project[];
@@ -24,7 +25,7 @@ export default function ProjectsList({ projects }: PropsType) {
         const translation = project.translations.find((t) => t.locale === lang);
 
         if (!translation) {
-          return <p>Translation not found</p>;
+          return <p key={project.id}>Translation not found</p>;
         }
 
         return (
