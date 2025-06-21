@@ -3,11 +3,17 @@ import { useTranslations } from 'next-intl';
 
 import { Link } from '@/i18n/navigation';
 
+import { Project } from '../Project/Project';
 import ProjectsList from '../ProjectsList/ProjectsList';
 
 import css from './Projects.module.css';
 
-export default function Projects({ ProjectsPage }: { ProjectsPage?: boolean }) {
+type PropsType = {
+  projects?: Project[];
+  ProjectsPage?: boolean;
+};
+
+export default function Projects({ projects, ProjectsPage }: PropsType) {
   const t = useTranslations('Projects');
 
   return (
@@ -18,7 +24,7 @@ export default function Projects({ ProjectsPage }: { ProjectsPage?: boolean }) {
           <h2 className="title">{t('title')}</h2>
           <p className="descr">{t('description')}</p>
         </div>
-        <ProjectsList />
+        {projects && <ProjectsList projects={projects} />}
         {!ProjectsPage && (
           <Link className={clsx(css.link, 'primary-btn')} href="/projects">
             {t('buttonText')}

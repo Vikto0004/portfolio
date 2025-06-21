@@ -10,30 +10,32 @@ import { useValidLang } from '@/utils/hooks/valid-lang';
 import ProjectList from '../ProjectList/ProjectList';
 
 import css from './Project.module.css';
+import { LangType } from '@/i18n/routing';
 
 type ProjectTranslations = {
+  id: number;
+  project_id: string;
+  locale: LangType;
   title: string;
   date: string;
   alt: string;
   description: string;
   author: string;
   complexity: string;
-  workSummary: string;
+  work_summary: string;
   responsibilities: string[];
 };
 
 export type Project = {
   id: string;
-  authorTag: 'solo' | 'team';
-  complexityTag: 'medium' | 'high' | 'low';
-  dateISO: string;
+  author_tag: 'solo' | 'team';
+  complexity_tag: 'medium' | 'high' | 'low';
+  date_iso_: string;
   image: string | StaticImageData;
-  siteLink: string;
-  githubLink: string;
+  site_link: string;
+  github_link: string;
   technologies: string[];
-  translations: {
-    [key: string]: ProjectTranslations;
-  };
+  translations: ProjectTranslations[];
 };
 
 type Props = {

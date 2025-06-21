@@ -1,9 +1,16 @@
 import Projects from '@/components/Projects/Projects';
+import Test from '@/components/Test/Test';
+import { getProjects } from '@/lib/get-projects';
 
-export default function ProjectsPage() {
+export default async function ProjectsPage() {
+  const projects = await getProjects();
+
+  console.log(projects);
+
   return (
     <>
-      <Projects ProjectsPage={true} />
+      <Test projects={projects} />
+      {/* <Projects projects={projects} ProjectsPage={true} /> */}
     </>
   );
 }
