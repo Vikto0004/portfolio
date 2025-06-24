@@ -1,22 +1,16 @@
 import { NextRequest, NextResponse } from 'next/server';
 
-export async function GET(req: NextRequest) {
-  const { searchParams, pathname } = new URL(req.url);
+export async function GET(
+  req: NextRequest,
+  context: { params: Promise<{ locale: string; id: string }> }
+) {
+  const params = await context.params;
+  const { locale, id } = params;
 
-  const segments = pathname.split('/');
-  const locale = segments[1] || 'en';
-
-  const page = searchParams.get('page') ?? '1';
-  const limit = searchParams.get('limit') ?? '10';
-
-  const url = new URL(`${process.env.NEXT_PUBLIC_DIRECTUS_URL}/items/projects`);
-
+  const url = new URL(`${process.env.NEXT_PUBLIC_DIRECTUS_URL}/items/projects/${id}`);
   url.searchParams.set('fields', '*,translations.*');
   url.searchParams.set('filter[status][_eq]', 'published');
   url.searchParams.set('deep[translations][filter][locale][_eq]', locale);
-  url.searchParams.set('page', String(page));
-  url.searchParams.set('limit', String(limit));
-  url.searchParams.set('meta', 'filter_count');
 
   const res = await fetch(url.toString(), {
     headers: {
@@ -31,5 +25,8 @@ export async function GET(req: NextRequest) {
   }
 
   const data = await res.json();
+
+  data.data.translations = data.data.translations?.filter((t: any) => t.locale === locale);
+
   return NextResponse.json(data);
 }

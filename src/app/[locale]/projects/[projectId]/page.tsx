@@ -1,11 +1,23 @@
-// import { projectsData } from '@/components/data/projectsData';
-// import Project from '@/components/Project/Project';
+import Project from '@/components/Project/Project';
 
-export default function ProjectPage() {
+type PropsType = {
+  params: Promise<{
+    locale: string;
+    projectId: string;
+  }>;
+};
+
+export default async function ProjectPage({ params }: PropsType) {
+  const { locale, projectId } = await params;
+
+  const DIRECTUS_URL = process.env.NEXT_PUBLIC_DIRECTUS_URL;
+
+  const res = await fetch(`${DIRECTUS_URL}/${locale}/api/projects/${projectId}`);
+  const project = await res.json();
+
   return (
     <>
-      <p>Project</p>
-      {/* <Project project={projectsData[0]} /> */}
+      <Project project={project.data} />
     </>
   );
 }

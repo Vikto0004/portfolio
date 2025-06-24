@@ -6,10 +6,10 @@ import { useTranslations } from 'next-intl';
 import { useEffect, useMemo, useState } from 'react';
 
 import { Link } from '@/i18n/navigation';
+import type { Project } from '@/types/project';
 import { useValidLang } from '@/utils/hooks/valid-lang';
 
 import Loader from '../Loader/Loader';
-import { Project } from '../Project/Project';
 import ProjectsList from '../ProjectsList/ProjectsList';
 import ProjectsNav from '../ProjectsNav/ProjectsNav';
 
@@ -46,7 +46,7 @@ export default function Projects({ ProjectsPage }: PropsType) {
         const data = await res.json();
 
         setProjects(data.data);
-        setTotalPages(Math.ceil(data.meta.total_count / limit));
+        setTotalPages(Math.ceil(data.meta.filter_count / limit));
       } catch (err) {
         console.error('Failed to fetch projects', err);
       } finally {

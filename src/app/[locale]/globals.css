@@ -170,7 +170,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: stretch;
+  align-items: center;
   gap: 60px 100px;
 }
 

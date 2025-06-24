@@ -3,9 +3,8 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
 import { Link } from '@/i18n/navigation';
+import type { Project } from '@/types/project';
 import { useValidLang } from '@/utils/hooks/valid-lang';
-
-import { Project } from '../Project/Project';
 
 import css from './ProjectsList.module.css';
 
