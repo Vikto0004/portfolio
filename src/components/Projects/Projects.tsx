@@ -25,7 +25,7 @@ export default function Projects({ ProjectsPage }: PropsType) {
   const searchParams = useSearchParams();
 
   const page = useMemo(() => Number(searchParams.get('page') || '1'), [searchParams]);
-  const limit = useMemo(() => Number(searchParams.get('limit') || '4'), [searchParams]);
+  const limit = useMemo(() => Number(searchParams.get('limit') || '6'), [searchParams]);
 
   const [totalPages, setTotalPages] = useState(1);
   const [projects, setProjects] = useState<Project[] | null>(null);

@@ -39,7 +39,11 @@ export default function Header() {
           {t('contact')}
         </Link>
       </nav>
-      <button className={css.burger} onClick={() => setToggleMenu(!toggleMenu)}>
+      <button
+        className={css.burger}
+        onClick={() => setToggleMenu(!toggleMenu)}
+        aria-label="Open menu"
+      >
         <CiMenuBurger />
       </button>
       <div className={clsx(css.mobileMenu, toggleMenu && css.mobileMenuActive)}>
@@ -48,7 +52,11 @@ export default function Header() {
             <Logo />
             VG.dev
           </Link>
-          <button className={css.closeBtn} onClick={() => setToggleMenu(!toggleMenu)}>
+          <button
+            className={css.closeBtn}
+            onClick={() => setToggleMenu(!toggleMenu)}
+            aria-label="Close menu"
+          >
             <AiOutlineClose />
           </button>
         </div>

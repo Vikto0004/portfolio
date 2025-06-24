@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import clsx from "clsx";
-import Image from "next/image";
-import { useTranslations } from "next-intl";
-import { useEffect } from "react";
+import clsx from 'clsx';
+import Image from 'next/image';
+import { useTranslations } from 'next-intl';
+import { useEffect } from 'react';
 
-import heroImg from "../../../public/images/hero-img.jpeg";
+import heroImg from '../../../public/images/hero-img.jpeg';
 
-import css from "./Hero.module.css";
+import css from './Hero.module.css';
 
 export default function Hero() {
-  const t = useTranslations("Hero");
+  const t = useTranslations('Hero');
 
   function animateValue(el: HTMLElement, end: number, duration = 2000) {
     const start = 0;
@@ -40,17 +40,14 @@ export default function Hero() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const statItems = entry.target.querySelectorAll<HTMLElement>(
-              `.${css.statsItemSubtitle}`,
+              `.${css.statsItemSubtitle}`
             );
 
             statItems.forEach((item) => {
-              const target = parseInt(
-                item.getAttribute("data-target") || "0",
-                10,
-              );
-              if (!item.classList.contains("animated")) {
+              const target = parseInt(item.getAttribute('data-target') || '0', 10);
+              if (!item.classList.contains('animated')) {
                 animateValue(item, target);
-                item.classList.add("animated");
+                item.classList.add('animated');
               }
             });
 
@@ -58,7 +55,7 @@ export default function Hero() {
           }
         });
       },
-      { threshold: 0.5 },
+      { threshold: 0.5 }
     );
 
     const statsList = document.querySelector(`.${css.statsList}`);
@@ -75,10 +72,10 @@ export default function Hero() {
     <section className={css.hero}>
       <div className="container container-flex">
         <div className={css.heroContent}>
-          <h1 className={css.heroTitle}>{t("title")}</h1>
-          <p className={clsx(css.heroDescr, "descr")}>{t("description")}</p>
+          <h1 className={css.heroTitle}>{t('title')}</h1>
+          <p className={clsx(css.heroDescr, 'descr')}>{t('description')}</p>
           <a href="#services" className="primary-btn">
-            {t("buttonText")}
+            {t('buttonText')}
           </a>
         </div>
         <div className="wrapper">
@@ -93,22 +90,22 @@ export default function Hero() {
         </div>
         <ul className={css.statsList}>
           <li className={css.statsItem}>
-            <h3 className={css.statsItemSubtitle} data-target="14">
+            <p className={css.statsItemSubtitle} data-target="14">
               0<span>+</span>
-            </h3>
-            <p className="descr">{t("statsList.clients")}</p>
+            </p>
+            <p className="descr">{t('statsList.clients')}</p>
           </li>
           <li className={css.statsItem}>
-            <h3 className={css.statsItemSubtitle} data-target="16">
+            <p className={css.statsItemSubtitle} data-target="16">
               0
-            </h3>
-            <p className="descr">{t("statsList.projects")}</p>
+            </p>
+            <p className="descr">{t('statsList.projects')}</p>
           </li>
           <li className={css.statsItem}>
-            <h3 className={css.statsItemSubtitle} data-target="100">
+            <p className={css.statsItemSubtitle} data-target="100">
               0<span>%</span>
-            </h3>
-            <p className="descr">{t("statsList.responsibility")}</p>
+            </p>
+            <p className="descr">{t('statsList.responsibility')}</p>
           </li>
         </ul>
       </div>
