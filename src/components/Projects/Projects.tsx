@@ -1,20 +1,61 @@
+'use client';
+
 import clsx from 'clsx';
+import { useSearchParams } from 'next/navigation';
 import { useTranslations } from 'next-intl';
+import { useEffect, useMemo, useState } from 'react';
 
 import { Link } from '@/i18n/navigation';
+import { useValidLang } from '@/utils/hooks/valid-lang';
 
+import Loader from '../Loader/Loader';
 import { Project } from '../Project/Project';
 import ProjectsList from '../ProjectsList/ProjectsList';
+import ProjectsNav from '../ProjectsNav/ProjectsNav';
 
 import css from './Projects.module.css';
 
 type PropsType = {
-  projects?: Project[];
   ProjectsPage?: boolean;
 };
 
-export default function Projects({ projects, ProjectsPage }: PropsType) {
+export default function Projects({ ProjectsPage }: PropsType) {
   const t = useTranslations('Projects');
+  const lang = useValidLang();
+  const searchParams = useSearchParams();
+
+  const page = useMemo(() => Number(searchParams.get('page') || '1'), [searchParams]);
+  const limit = useMemo(() => Number(searchParams.get('limit') || '4'), [searchParams]);
+
+  const [totalPages, setTotalPages] = useState(1);
+  const [projects, setProjects] = useState<Project[] | null>(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      setLoading(true);
+
+      try {
+        let url = `api/projects?page=${page}&limit=${limit}`;
+
+        if (!ProjectsPage) {
+          url = `${lang}/api/projects?page=1&limit=2`;
+        }
+
+        const res = await fetch(url);
+        const data = await res.json();
+
+        setProjects(data.data);
+        setTotalPages(Math.ceil(data.meta.total_count / limit));
+      } catch (err) {
+        console.error('Failed to fetch projects', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProjects();
+  }, [page, limit, ProjectsPage, lang]);
 
   return (
     <section className={css.projects}>
@@ -24,8 +65,15 @@ export default function Projects({ projects, ProjectsPage }: PropsType) {
           <h2 className="title">{t('title')}</h2>
           <p className="descr">{t('description')}</p>
         </div>
-        {projects && <ProjectsList projects={projects} />}
-        {!ProjectsPage && (
+
+        {loading && <Loader overlay={false} />}
+        {!loading && projects && <ProjectsList projects={projects} />}
+
+        {ProjectsPage && !loading && totalPages !== 1 && (
+          <ProjectsNav totalPages={totalPages} page={page} limit={limit} />
+        )}
+
+        {!ProjectsPage && !loading && (
           <Link className={clsx(css.link, 'primary-btn')} href="/projects">
             {t('buttonText')}
           </Link>

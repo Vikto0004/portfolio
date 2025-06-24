@@ -67,6 +67,7 @@
 
 .itemContentSubtitle {
   margin-bottom: 8px;
+  text-align: start;
 }
 
 .itemContentDescr {

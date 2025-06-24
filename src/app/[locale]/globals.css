@@ -7,6 +7,7 @@ html {
 :root {
   --primary-color: #a90a14;
   --primary-hover: #90000a;
+  --primary-disabled: #500005;
 
   --text-primary: #e7e7e7;
   --text-secondary: #121212;
@@ -210,6 +211,12 @@ section {
 .primary-btn:hover {
   background-color: var(--primary-hover);
   color: var(--text-primary);
+}
+
+.primary-btn:disabled {
+  background-color: var(--primary-disabled);
+  color: var(--text-primary);
+  cursor: auto;
 }
 
 .terms-privacy {

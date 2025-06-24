@@ -1,5 +1,5 @@
-import createNextIntlPlugin from 'next-intl/plugin';
 import type { NextConfig } from 'next';
+import createNextIntlPlugin from 'next-intl/plugin';
 
 const nextConfig: NextConfig = {
   images: {
@@ -14,6 +14,11 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'portfolio-xi-bice-64.vercel.app',
         pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'directus-production-7724.up.railway.app',
+        pathname: '/assets/**',
       },
     ],
   },
