@@ -3,12 +3,12 @@
 import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
-import { useNoScroll } from '@/utils/hooks/no-scroll';
 import { AiOutlineClose } from 'react-icons/ai';
 import { CiMenuBurger } from 'react-icons/ci';
 
 import Logo from '@/components/Logo/Logo';
 import { Link } from '@/i18n/navigation';
+import { useNoScroll } from '@/utils/hooks/no-scroll';
 
 import SelectLang from '../SelectLang/SelectLang';
 
