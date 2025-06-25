@@ -1,7 +1,8 @@
 module.exports = {
   root: true,
-  extends: ['next', 'next/core-web-vitals'],
-  plugins: ['import'],
+  parser: '@typescript-eslint/parser',
+  plugins: ['import', '@typescript-eslint'],
+  extends: ['next', 'next/core-web-vitals', 'plugin:@typescript-eslint/recommended'],
   rules: {
     'import/order': [
       'error',

@@ -8,6 +8,7 @@ import { Link } from '@/i18n/navigation';
 import Logo from '../Logo/Logo';
 
 import css from './Footer.module.css';
+import NavLink from '../NavLink/NavLink';
 
 export default function Footer() {
   const t = useTranslations('Footer');
@@ -24,19 +25,19 @@ export default function Footer() {
             <h3 className={css.subtitle}>{t('menu.title')}</h3>
             <ul className={css.navList}>
               <li>
-                <Link className={css.link} href="/">
+                <NavLink className={css.link} href="/">
                   {t('menu.home')}
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link className={css.link} href="/projects">
+                <NavLink className={css.link} href="/projects">
                   {t('menu.projects')}
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link className={css.link} href="/contact">
+                <NavLink className={css.link} href="/contact">
                   {t('menu.contact')}
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -44,19 +45,19 @@ export default function Footer() {
             <h3 className={css.subtitle}>{t('services.title')}</h3>
             <ul className={css.navList}>
               <li>
-                <Link className={css.link} href="/cookie-policy">
+                <NavLink className={css.link} href="/cookie-policy">
                   {t('services.cookiPolicy')}
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link className={css.link} href="/privacy-policy">
+                <NavLink className={css.link} href="/privacy-policy">
                   {t('services.privacyPolicy')}
-                </Link>
+                </NavLink>
               </li>
               <li>
-                <Link className={css.link} href="/terms-of-use">
+                <NavLink className={css.link} href="/terms-of-use">
                   {t('services.termsOfUse')}
-                </Link>
+                </NavLink>
               </li>
             </ul>
           </div>

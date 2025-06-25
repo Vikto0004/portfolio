@@ -10,7 +10,7 @@ li.historyItem {
 }
 
 .historyItem::after {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 0;
   right: 20px;
@@ -23,7 +23,7 @@ li.historyItem {
 }
 
 .historyItem::before {
-  content: "";
+  content: '';
   position: absolute;
   bottom: 17px;
   left: 0;
@@ -37,17 +37,14 @@ li.historyItem {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 30px 6px;
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  border: 10px solid var(--secondary-background);
-  border-bottom: none;
+  margin-bottom: -24px;
+  z-index: 2;
 }
 
 .historyItemWrap span {
   text-align: center;
-  font-size: 32px;
-  font-weight: 600;
+  font-size: 42px;
+  font-weight: 400;
   color: var(--primary-color);
 }
 
@@ -74,5 +71,15 @@ li.historyItem {
 
   .historyItem::after {
     right: 15px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  li.historyItem {
+    padding-bottom: 50px;
+  }
+
+  .historyItemContent {
+    padding: 20px 15px 65px;
   }
 }

@@ -13,6 +13,7 @@ import { useNoScroll } from '@/utils/hooks/no-scroll';
 import SelectLang from '../SelectLang/SelectLang';
 
 import css from './Header.module.css';
+import NavLink from '../NavLink/NavLink';
 
 export default function Header() {
   const t = useTranslations('Header');
@@ -28,10 +29,10 @@ export default function Header() {
         </Link>
         <ul className={css.navList}>
           <li>
-            <Link href="/">{t('home')}</Link>
+            <NavLink href="/">{t('home')}</NavLink>
           </li>
           <li>
-            <Link href="/projects">{t('projects')}</Link>
+            <NavLink href="/projects">{t('projects')}</NavLink>
           </li>
         </ul>
         <SelectLang />
@@ -63,18 +64,22 @@ export default function Header() {
         <nav className={css.mobileNav}>
           <ul className={css.mobileNavList}>
             <li>
-              <Link onClick={() => setToggleMenu(!toggleMenu)} href="/">
+              <NavLink onClick={() => setToggleMenu(!toggleMenu)} href="/">
                 {t('home')}
-              </Link>
+              </NavLink>
             </li>
             <li>
-              <Link onClick={() => setToggleMenu(!toggleMenu)} href="/projects">
+              <NavLink onClick={() => setToggleMenu(!toggleMenu)} href="/projects">
                 {t('projects')}
-              </Link>
+              </NavLink>
             </li>
           </ul>
         </nav>
-        <Link onClick={() => setToggleMenu(!toggleMenu)} className="primary-btn" href="/contact">
+        <Link
+          onClick={() => setToggleMenu(!toggleMenu)}
+          className={clsx(css.link, 'primary-btn')}
+          href="/contact"
+        >
           {t('contact')}
         </Link>
       </div>

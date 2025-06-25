@@ -87,4 +87,8 @@
   .navContainer {
     width: 100%;
   }
+
+  a.link {
+    font-size: 16px;
+  }
 }
