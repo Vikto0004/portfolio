@@ -6,7 +6,6 @@ import { useTranslations } from 'next-intl';
 import { useEffect } from 'react';
 
 import heroImg from '../../../public/images/hero-img.jpeg';
-
 import css from './Hero.module.css';
 
 export default function Hero() {

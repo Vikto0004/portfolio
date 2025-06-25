@@ -3,13 +3,13 @@ import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 
 import { Link } from '@/i18n/navigation';
-import type { Project } from '@/types/project';
+import type { ProjectType } from '@/types/project';
 import { useValidLang } from '@/utils/hooks/valid-lang';
 
 import css from './ProjectsList.module.css';
 
 type PropsType = {
-  projects: Project[];
+  projects: ProjectType[];
 };
 
 export default function ProjectsList({ projects }: PropsType) {

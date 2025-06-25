@@ -1,7 +1,7 @@
-import css from './ServiceContainer.module.css';
-
-import { useValidLang } from '@/utils/hooks/valid-lang';
 import { ServicePagesContent } from '@/types/service-pages';
+import { useValidLang } from '@/utils/hooks/valid-lang';
+
+import css from './ServiceContainer.module.css';
 
 type PropsType = {
   data: ServicePagesContent;

@@ -2,7 +2,6 @@ import clsx from 'clsx';
 import { useTranslations } from 'next-intl';
 
 import ServicesList from '../ServicesList/ServicesList';
-
 import css from './Services.module.css';
 
 export default function Services() {

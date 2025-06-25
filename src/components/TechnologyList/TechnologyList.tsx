@@ -1,8 +1,7 @@
-import Image from "next/image";
+import Image from 'next/image';
 
-import { technologies } from "../data/technologyData";
-
-import css from "./TechnologyList.module.css";
+import { technologies } from '../data/technologyData';
+import css from './TechnologyList.module.css';
 
 export default function TechnologyList() {
   return (

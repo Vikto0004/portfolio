@@ -3,7 +3,6 @@ import { useTranslations } from 'next-intl';
 
 import ContactForm from '../ContactForm/ContactForm';
 import ContactList from '../ContactList/ContactList';
-
 import css from './Contact.module.css';
 
 export default function Contact() {

@@ -1,10 +1,10 @@
+import 'swiper/css';
+
 import clsx from 'clsx';
 
 import { useValidLang } from '@/utils/hooks/valid-lang';
 
-import 'swiper/css';
 import { historyItems } from '../data/historyData';
-
 import css from './HistoryList.module.css';
 
 export default function HistoryList() {

@@ -1,12 +1,12 @@
 import './globals.css';
 
-import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { NextIntlClientProvider, hasLocale } from 'next-intl';
+import { hasLocale,NextIntlClientProvider } from 'next-intl';
 
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
 import { routing } from '@/i18n/routing';
+import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
   title: 'VG.dev – Web Developer Portfolio',

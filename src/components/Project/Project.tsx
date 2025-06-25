@@ -1,18 +1,17 @@
 import clsx from 'clsx';
-import Image, { StaticImageData } from 'next/image';
+import Image from 'next/image';
 import { useTranslations } from 'next-intl';
 import { FaGithub } from 'react-icons/fa';
 import { FiLink } from 'react-icons/fi';
 
 import { Link } from '@/i18n/navigation';
-import type { Project } from '@/types/project';
+import type { ProjectType } from '@/types/project';
 
 import ProjectList from '../ProjectList/ProjectList';
-
 import css from './Project.module.css';
 
 type Props = {
-  project: Project;
+  project: ProjectType;
 };
 
 export default function Project({ project }: Props) {

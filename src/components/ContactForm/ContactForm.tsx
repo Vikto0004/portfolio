@@ -1,6 +1,6 @@
 'use client';
 
-import { Formik, Form, Field, ErrorMessage, FormikHelpers } from 'formik';
+import { ErrorMessage, Field, Form, Formik, FormikHelpers } from 'formik';
 import { useTranslations } from 'next-intl';
 import { useState } from 'react';
 import * as Yup from 'yup';
@@ -8,18 +8,12 @@ import * as Yup from 'yup';
 import { useNoScroll } from '@/utils/hooks/no-scroll';
 
 import Loader from '../Loader/Loader';
-
 import css from './ContactForm.module.css';
 
 interface FormValues {
   name: string;
   email: string;
   message: string;
-}
-
-interface StatusType {
-  success: boolean;
-  message?: string;
 }
 
 export default function ContactForm() {
@@ -43,7 +37,7 @@ export default function ContactForm() {
   const handleSubmit = async (
     values: FormValues,
     formikHelpers: FormikHelpers<FormValues> & {
-      setStatus: (status: StatusType) => void;
+      setStatus: () => void;
     }
   ) => {
     const { resetForm, setSubmitting, setStatus } = formikHelpers;

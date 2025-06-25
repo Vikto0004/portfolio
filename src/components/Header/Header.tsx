@@ -10,10 +10,9 @@ import Logo from '@/components/Logo/Logo';
 import { Link } from '@/i18n/navigation';
 import { useNoScroll } from '@/utils/hooks/no-scroll';
 
-import SelectLang from '../SelectLang/SelectLang';
-
-import css from './Header.module.css';
 import NavLink from '../NavLink/NavLink';
+import SelectLang from '../SelectLang/SelectLang';
+import css from './Header.module.css';
 
 export default function Header() {
   const t = useTranslations('Header');

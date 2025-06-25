@@ -16,7 +16,7 @@ export type ProjectTranslations = {
   responsibilities: string[];
 };
 
-export type Project = {
+export type ProjectType = {
   id: string;
   author_tag: 'solo' | 'team';
   complexity_tag: 'medium' | 'high' | 'low';

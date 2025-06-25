@@ -6,9 +6,8 @@ import { GoMail } from 'react-icons/go';
 import { Link } from '@/i18n/navigation';
 
 import Logo from '../Logo/Logo';
-
-import css from './Footer.module.css';
 import NavLink from '../NavLink/NavLink';
+import css from './Footer.module.css';
 
 export default function Footer() {
   const t = useTranslations('Footer');

@@ -6,13 +6,12 @@ import { useTranslations } from 'next-intl';
 import { useEffect, useMemo, useState } from 'react';
 
 import { Link } from '@/i18n/navigation';
-import type { Project } from '@/types/project';
+import type { ProjectType } from '@/types/project';
 import { useValidLang } from '@/utils/hooks/valid-lang';
 
 import Loader from '../Loader/Loader';
 import ProjectsList from '../ProjectsList/ProjectsList';
 import ProjectsNav from '../ProjectsNav/ProjectsNav';
-
 import css from './Projects.module.css';
 
 type PropsType = {
@@ -28,7 +27,7 @@ export default function Projects({ ProjectsPage }: PropsType) {
   const limit = useMemo(() => Number(searchParams.get('limit') || '6'), [searchParams]);
 
   const [totalPages, setTotalPages] = useState(1);
-  const [projects, setProjects] = useState<Project[] | null>(null);
+  const [projects, setProjects] = useState<ProjectType[] | null>(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
