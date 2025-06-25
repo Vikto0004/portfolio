@@ -1,10 +1,10 @@
 'use client';
 
 import clsx from 'clsx';
-import { ReactNode } from 'react';
 
 import css from './NavLink.module.css';
 import { Link, usePathname } from '@/i18n/navigation';
+import { ReactNode } from 'react';
 
 type PropsType = {
   href: string;

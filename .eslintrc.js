@@ -1,9 +1,9 @@
 module.exports = {
   root: true,
-  parser: '@typescript-eslint/parser',
-  plugins: ['import', '@typescript-eslint'],
-  extends: ['next', 'next/core-web-vitals', 'plugin:@typescript-eslint/recommended'],
+  extends: ['next', 'next/core-web-vitals', 'prettier'],
+  plugins: ['import', 'prettier'],
   rules: {
+    'prettier/prettier': 'error',
     'import/order': [
       'error',
       {
