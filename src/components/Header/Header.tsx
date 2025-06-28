@@ -24,7 +24,7 @@ export default function Header() {
       <nav className={css.headerNav}>
         <Link className={css.logo} href="/">
           <Logo />
-          VG.dev
+          Hedzo.dev
         </Link>
         <ul className={css.navList}>
           <li>

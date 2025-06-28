@@ -1,17 +1,18 @@
 import './globals.css';
 
+import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
-import { hasLocale,NextIntlClientProvider } from 'next-intl';
+import { hasLocale, NextIntlClientProvider } from 'next-intl';
+import React from 'react';
 
 import Footer from '@/components/Footer/Footer';
 import Header from '@/components/Header/Header';
 import { routing } from '@/i18n/routing';
-import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'VG.dev – Web Developer Portfolio',
+  title: 'Hedzo.dev – Web Developer Portfolio',
   description:
-    'Personal portfolio website of VG.dev – frontend web developer showcasing projects, skills and contact info.',
+    'Personal portfolio website of Hedzo.dev – frontend web developer showcasing projects, skills and contact info.',
   icons: {
     icon: '/favicon.svg',
   },

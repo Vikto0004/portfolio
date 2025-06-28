@@ -18,7 +18,7 @@ export default function Footer() {
         <nav className={css.footerNav}>
           <Link className={css.logo} href="/">
             <Logo />
-            VG.dev
+            Hedzo.dev
           </Link>
           <div className={css.navContainer}>
             <h3 className={css.subtitle}>{t('menu.title')}</h3>
