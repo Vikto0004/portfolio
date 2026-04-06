@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Personal Portfolio Website
 
-## Getting Started
+🔗 Live: https://www.hedzo.dev/
 
-First, run the development server:
+## 📖 About the Project
+This is my personal portfolio website built to showcase my projects, skills, and experience as a frontend developer.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The platform includes dynamic content management powered by a headless CMS, allowing me to easily update and manage project data without modifying the codebase.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+---
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 🚀 Features
+- 🌍 Multi-language support  
+- 📱 Fully responsive (fluid) design  
+- 📂 Dynamic project loading from database  
+- 🔎 Project details view with extended information  
+- 📄 Pagination for project listing  
+- ✉️ Contact form with email notifications  
+- ⚡ Fast and optimized performance  
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## 🛠 Tech Stack
+- Next.js  
+- TypeScript  
+- CSS Modules  
+- REST API  
+- PostgreSQL  
+- Directus (Headless CMS)  
+- Railway (Deployment)  
 
-To learn more about Next.js, take a look at the following resources:
+---
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## 🧠 What I Learned
+This project helped me gain hands-on experience with:
+- Integrating a headless CMS (Directus)  
+- Working with PostgreSQL database  
+- Designing and structuring backend data  
+- Fetching and rendering dynamic content via REST API  
+- Building scalable and maintainable frontend architecture  
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
+![Screenshot](./public/images/preview.png)
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 📬 Contact
+If you'd like to work with me or have any questions, feel free to reach out via the contact form on the website.
